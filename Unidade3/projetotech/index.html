@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubra os melhores bares de Brasília com classificações, endereços e informações de contato.">
+    <meta name="keywords" content="bares Brasília, vida noturna, entretenimento, Brasília">
+    <title>Os Melhores Bares de Brasília | Guia Completo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #d4a574;
+            --secondary-color: #2c3e50;
+            --accent-color: #e67e22;
+            --light-bg: #ecf0f1;
+            --dark-text: #2c3e50;
+            --border-color: #bdc3c7;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-text);
+            background-color: var(--light-bg);
+        }
+
+        /* Header e Navegação */
+        header {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, #34495e 100%);
+            color: var(--white);
+            padding: 1.5rem 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23d4a574" width="1200" height="600" opacity="0.1"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 6rem 1rem;
+            text-align: center;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--accent-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 5px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background-color: var(--primary-color);
+            margin-left: 1rem;
+        }
+
+        /* Bares Grid */
+        .bares-section {
+            padding: 4rem 1rem;
+            background-color: var(--white);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--secondary-color);
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            border-radius: 2px;
+        }
+
+        .bares-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .bar-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+        }
+
+        .bar-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .bar-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: var(--white);
+            overflow: hidden;
+        }
+
+        .bar-content {
+            padding: 1.5rem;
+        }
+
+        .bar-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .bar-rating {
+            color: var(--accent-color);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .star {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+        }
+
+        .bar-description {
+            color: #555;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .bar-info {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .bar-info strong {
+            color: var(--secondary-color);
+        }
+
+        .bar-tags {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: var(--light-bg);
+            color: var(--secondary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Filtros */
+        .filters {
+            text-align: center;
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.6rem 1.2rem;
+            background-color: var(--light-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+            color: var(--secondary-color);
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background-color: var(--accent-color);
+            color: var(--white);
+            border-color: var(--accent-color);
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 4rem 1rem;
+            background: linear-gradient(135deg, var(--light-bg) 0%, var(--white) 100%);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .about-text p {
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: var(--white);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 4rem 1rem;
+            background-color: var(--secondary-color);
+            color: var(--white);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .contact-info p {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-form label {
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 0.8rem;
+            border: none;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a252f;
+            color: var(--white);
+            text-align: center;
+            padding: 2rem 1rem;
+            border-top: 3px solid var(--primary-color);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-color);
+            padding-top: 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent-color);
+            transform: scale(1.2);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .bares-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            .btn {
+                padding: 0.6rem 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            .btn-secondary {
+                margin-left: 0;
+                margin-top: 0.5rem;
+            }
+
+            .header-content {
+                justify-content: space-between;
+            }
+
+            .hero {
+                padding: 3rem 1rem;
+            }
+
+            .filters {
+                gap: 0.5rem;
+            }
+
+            .filter-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .bar-card {
+                margin: 0 auto;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .contact-form {
+                gap: 0.8rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        /* Animações */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .bar-card {
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        .bar-card:nth-child(1) { animation-delay: 0.1s; }
+        .bar-card:nth-child(2) { animation-delay: 0.2s; }
+        .bar-card:nth-child(3) { animation-delay: 0.3s; }
+        .bar-card:nth-child(4) { animation-delay: 0.4s; }
+        .bar-card:nth-child(5) { animation-delay: 0.5s; }
+        .bar-card:nth-child(6) { animation-delay: 0.6s; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">🍺 Bares BSB</a>
+                <nav>
+                    <ul>
+                        <li><a href="#bares">Bares</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Descubra os Melhores Bares de Brasília</h1>
+            <p>Explore nossa seleção dos estabelecimentos mais incríveis para curtir a noite na capital</p>
+            <a href="#bares" class="btn">Explorar Bares</a>
+        </div>
+    </section>
+
+    <!-- Bares Section -->
+    <section class="bares-section" id="bares">
+        <div class="container">
+            <h2 class="section-title">Os Melhores Bares</h2>
+            
+            <div class="filters">
+                <button class="filter-btn active">Todos</button>
+                <button class="filter-btn">Drinks</button>
+                <button class="filter-btn">Cerveja</button>
+                <button class="filter-btn">Música</button>
+                <button class="filter-btn">Gastronomia</button>
+            </div>
+
+            <article class="bares-grid">
+                <!-- Bar 1 -->
+                <div class="bar-card">
+                    <div class="bar-image">🍻</div>
+                    <div class="bar-content">
+                        <h3 class="bar-name">The Week</h3>
+                        <div class="bar-rating">
+                            <span class="star">★★★★★</span>
+                            <span>(4.8)</span>
+                        </div>
+                        <p class="bar-description">Balada eletrônica de referência em Brasília com pista de dança e open bar nos fins de semana.</p>
+                        <div class="bar-info">
+                            <strong>📍 Local:</strong>
+                            <span>Asa Sul</span>
+                        </div>
+                        <div class="bar-info">
+                            <strong>🕐 Horário:</strong>
+                            <span>22h - 06h</span>
+                        </div>
+                        <div class="bar-tags">
+                            <span class="tag">Eletrônica</span>
+                            <span class="tag">Balada</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bar 2 -->
+                <div class="bar-card">
+                    <div class="bar-image">🥃</div>
+                    <div class="bar-content">
+                        <h3 class="bar-name">Bar Brasília</h3>
+                        <div class="bar-rating">
+                            <span class="star">★★★★☆</span>
+                            <span>(4.6)</span>
+                        </div>
+                        <p class="bar-description">Bar tradicional com ambiente aconchegante, ótimas cervejas locais e petiscos caseiros autênticos.</p>
+                        <div class="bar-info">
+                            <strong>📍 Local:</strong>
+                            <span>Asa Norte</span>
+                        </div>
+                        <div class="bar-info">
+                            <strong>🕐 Horário:</strong>
+                            <span>16h - 02h</span>
+                        </div>
+                        <div class="bar-tags">
+                            <span class="tag">Cerveja</span>
+                            <span class="tag">Tradicional</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bar 3 -->
+                <div class="bar-card">
+                    <div class="bar-image">🍹</div>
+                    <div class="bar-content">
+                        <h3 class="bar-name">Boteco do Lado</h3>
+                        <div class="bar-rating">
+                            <span class="star">★★★★★</span>
+                            <span>(4.9)</span>
+                        </div>
+                        <p class="bar-description">Boteco descontraído com chopps premium, moqueca de camarão e samba ao vivo todas as noites.</p>
+                        <div class="bar-info">
+                            <strong>📍 Local:</strong>
+                            <span>Centro</span>
+                        </div>
+                        <div class="bar-info">
+                            <strong>🕐 Horário:</strong>
+                            <span>17h - 03h</span>
+                        </div>
+                        <div class="bar-tags">
+                            <span class="tag">Samba</span>
+                            <span class="tag">Chopp</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bar 4 -->
+                <div class="bar-card">
+                    <div class="bar-image">🍸</div>
+                    <div class="bar-content">
+                        <h3 class="bar-name">Cocktail Room</h3>
+                        <div class="bar-rating">
+                            <span class="star">★★★★☆</span>
+                            <span>(4.7)</span>
+                        </div>
+                        <p class="bar-description">Lounge sofisticado especializado em drinks artesanais com bartenders premiados e ambiente exclusivo.</p>
+                        <div class="bar-info">
+                            <strong>📍 Local:</strong>
+                            <span>Lago Sul</span>
+                        </div>
+                        <div class="bar-info">
+                            <strong>🕐 Horário:</strong>
+                            <span>19h - 02h</span>
+                        </div>
+                        <div class="bar-tags">
+                            <span class="tag">Drinks</span>
+                            <span class="tag">Sofisticado</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bar 5 -->
+                <div class="bar-card">
+                    <div class="bar-image">🎶</div>
+                    <div class="bar-content">
+                        <h3 class="bar-name">Live Music Bar</h3>
+                        <div class="bar-rating">
+                            <span class="star">★★★★★</span>
+                            <span>(4.8)</span>
+                        </div>
+                        <p class="bar-description">Casa de shows com as melhores bandas locais, cardápio variado e adega com vinhos selecionados.</p>
+                        <div class="bar-info">
+                            <strong>📍 Local:</strong>
+                            <span>Asa Sul</span>
+                        </div>
+                        <div class="bar-info">
+                            <strong>🕐 Horário:</strong>
+                            <span>20h - 04h</span>
+                        </div>
+                        <div class="bar-tags">
+                            <span class="tag">Música ao Vivo</span>
+                            <span class="tag">Shows</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bar 6 -->
+                <div class="bar-card">
+                    <div class="bar-image">🍽️</div>
+                    <div class="bar-content">
+                        <h3 class="bar-name">Gastrobar Premium</h3>
+                        <div class="bar-rating">
+                            <span class="star">★★★★☆</span>
+                            <span>(4.6)</span>
+                        </div>
+                        <p class="bar-description">Bar gastronômico com menu fusion, coquetéis autorais e degustação de pratos para harmonização perfeita.</p>
+                        <div class="bar-info">
+                            <strong>📍 Local:</strong>
+                            <span>Park Way</span>
+                        </div>
+                        <div class="bar-info">
+                            <strong>🕐 Horário:</strong>
+                            <span>18h - 02h</span>
+                        </div>
+                        <div class="bar-tags">
+                            <span class="tag">Gastronomia</span>
+                            <span class="tag">Premium</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="sobre">
+        <div class="container">
+            <h2 class="section-title">Sobre Brasília</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>A Vida Noturna de Brasília</h2>
+                    <p>Brasília oferece uma cena de bares e baladas em constante evolução, com opções que variam desde o tradicional boteco até os lounges mais sofisticados.</p>
+                    <p>Nossa plataforma reúne os melhores estabelecimentos da capital federal, ajudando você a descobrir novos lugares e viver experiências inesquecíveis.</p>
+                    <p>Cada bar foi selecionado com cuidado, considerando qualidade de atendimento, variedade de bebidas, ambiente e entretenimento.</p>
+                </div>
+                <div class="about-image">🌆</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contato">
+        <div class="container">
+            <h2 class="section-title" style="color: var(--white);">Entre em Contato</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Informações</h3>
+                    <p>
+                        📍 <strong>Endereço:</strong><br>
+                        Brasília - DF, Brasil
+                    </p>
+                    <p>
+                        📧 <strong>Email:</strong><br>
+                        contato@baresbsb.com.br
+                    </p>
+                    <p>
+                        📱 <strong>Telefone:</strong><br>
+                        (61) 9999-9999
+                    </p>
+                    <p>
+                        🕐 <strong>Atendimento:</strong><br>
+                        Seg-Dom: 10h - 22h
+                    </p>
+                </div>
+                <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <div>
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="#bares">Bares</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categorias</h4>
+                    <ul>
+                        <li><a href="#">Balada</a></li>
+                        <li><a href="#">Boteco</a></li>
+                        <li><a href="#">Lounge</a></li>
+                        <li><a href="#">Shows</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="#" title="Facebook">f</a>
+                        <a href="#" title="Instagram">📷</a>
+                        <a href="#" title="Twitter">𝕏</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bares BSB. Todos os direitos reservados.</p>
+                <p>Desenvolvido com ❤️ para a vida noturna de Brasília</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Interatividade dos botões de filtro
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Smooth scroll para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Efeito de animação ao scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.bar-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
