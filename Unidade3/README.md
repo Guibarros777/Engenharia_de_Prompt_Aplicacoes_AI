@@ -3,7 +3,7 @@
 ## 📌 Desafio Escolhido
 
 Descreva aqui o desafio proposto pelo grupo (ex.: cadastro de usuários, automação de envio de e-mails, integração com API de IA).
-
+O app Saúde para Todos facilita seu acesso à medicina. Agende consultas de diversas especialidades e marque exames de imagem ou laboratoriais em poucos cliques, sem filas. O app oferece geolocalização para achar clínicas próximas, histórico médico digital, alertas de horários e receitas. Praticidade e bem-estar na palma da sua mão.
 ---
 
 ## 🖥️ Protótipo
