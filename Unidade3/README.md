@@ -56,6 +56,9 @@ então, apos a criação do codigo tentamos alterar o propmt ,refazer,refatorar 
 como estamos em dupla cada um ficou responsavel por uma tarefa seja  do design ate qual prompt usar ,tudo foi discutifo e feito lado a lado , a ideia foi em conjuto pois agrega a outros app que estamos desenvolvendo ,apesar de de algumas limitações para primeiro projeto o prototipo corre bem falta so alguns alinhamentos.
 
 ---
+solução
+http://resplendent-baklava-0f78d6.netlify.app
+
 
 ## 📝 Registro da Aula
 
