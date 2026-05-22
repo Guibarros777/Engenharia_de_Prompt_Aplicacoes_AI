@@ -3,7 +3,7 @@ name: Deploy Static HTML
 on:
   push:
     branches:
-      - main  # ou a branch padrão do seu repo
+      - main  
 
 jobs:
   deploy:
@@ -12,5 +12,5 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/upload-pages-artifact@v2
         with:
-          path: '.'  # ou './docs' se o index.html estiver lá
+          path: /index.htlm
       - uses: actions/deploy-pages@v2
