@@ -1,0 +1,16 @@
+name: Deploy Static HTML
+
+on:
+  push:
+    branches:
+      - main  # ou a branch padrão do seu repo
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/upload-pages-artifact@v2
+        with:
+          path: '.'  # ou './docs' se o index.html estiver lá
+      - uses: actions/deploy-pages@v2
