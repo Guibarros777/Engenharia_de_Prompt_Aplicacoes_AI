@@ -1,5 +1,5 @@
 # Projeto Módulo 3 – Low Code/No Code/Vibecode
-
+nomes:jose barros e guilherme silva
 ## 📌 Desafio Escolhido
 
 Descreva aqui o desafio proposto pelo grupo (ex.: cadastro de usuários, automação de envio de e-mails, integração com API de IA).
