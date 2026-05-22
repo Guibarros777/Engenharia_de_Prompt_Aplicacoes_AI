@@ -13,6 +13,7 @@ O app Saúde para Todos facilita seu acesso à medicina. Agende consultas de div
 ---
 
 ## ⚙️ Plataforma Utilizada
+gemini,cloude,copilot,figma
 - Justificativa da escolha: por que essa ferramenta foi selecionada para o desafio?
 Usamos o copilot,cloude , gemini e figma,ultilizamos o gemini como base para expormos nossas ideias ,o copilot para gerar o codigo ,cloude para gerar a visulização do site e vermos o que deveria ser alterado e assim da uma finalização no projeto
 
