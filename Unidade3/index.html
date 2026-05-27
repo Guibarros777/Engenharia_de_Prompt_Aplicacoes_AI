@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthSchedule - O Guia de Bares de Brasília</title>
+    <!-- Tailwind CSS via CDN para renderização estática instantânea no GitHub -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        slate: { 850: '#1e293b', 900: '#0f172a', 950: '#020617' },
+                        amber: { 400: '#fbbf24', 500: '#f59e0b' },
+                        emerald: { 400: '#34d399', 500: '#10b981' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen">
+
+    <!-- Efeitos de Brilho no Fundo -->
+    <div class="fixed top-0 left-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="fixed top-3/4 right-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <!-- Cabeçalho -->
+    <header class="border-b border-slate-900 bg-slate-950/80 backdrop-blur-md sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 to-amber-600 flex items-center justify-center text-slate-950 shadow-md shadow-amber-500/20 font-bold text-xl">
+                    ❤️
+                </div>
+                <div>
+                    <div class="flex items-center gap-1.5">
+                        <span class="font-extrabold text-lg tracking-tight text-white">HealthSchedule</span>
+                        <span class="text-[10px] font-bold bg-amber-500/10 text-amber-400 border border-amber-500/20 px-1.5 py-0.5 rounded-md uppercase">
+                            Boêmio DF
+                        </span>
+                    </div>
+                    <p class="text-[10px] text-slate-400 font-mono">Projeto de Engenharia de Software</p>
+                </div>
+            </div>
+            <a href="https://github.com/" target="_blank" class="px-4 py-2 border border-slate-800 text-slate-300 hover:text-white hover:bg-slate-900 rounded-xl text-xs font-semibold transition-all">
+                Ver Repositório
+            </a>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="max-w-7xl mx-auto px-6 pt-12 pb-20 space-y-16">
+        
+        <!-- Hero Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+            <div class="space-y-6">
+                <div class="inline-flex items-center gap-2 bg-slate-900 border border-slate-800 rounded-full px-4 py-1.5 text-xs text-slate-300">
+                    <span class="text-amber-500">✨</span> O Guia de Botecos Premium do Planalto Central
+                </div>
+                
+                <h1 class="text-4xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
+                    Explore Brasília,<br />
+                    <span class="bg-gradient-to-r from-amber-400 via-orange-400 to-amber-500 bg-clip-text text-transparent">
+                        Agende Seu Lazer Saudável
+                    </span>
+                </h1>
+
+                <p class="text-slate-400 text-lg leading-relaxed max-w-xl">
+                    O primeiro ecossistema boêmio que une a vida noturna do DF com metas reais de redução de danos. Encontre bares, filtre por eventos ao vivo e planeje seu rolê com controle de consumo e hidratação.
+                </p>
+
+                <div class="flex flex-wrap gap-3 pt-4">
+                    <span class="text-sm bg-slate-900 border border-slate-800 text-emerald-400 font-mono px-4 py-2 rounded-xl flex items-center gap-2 shadow-lg shadow-emerald-500/5">
+                        💧 Metas de Hidratação
+                    </span>
+                    <span class="text-sm bg-slate-900 border border-slate-800 text-amber-400 font-mono px-4 py-2 rounded-xl flex items-center gap-2 shadow-lg shadow-amber-500/5">
+                        💸 Teto de Consumo
+                    </span>
+                    <span class="text-sm bg-slate-900 border border-slate-800 text-sky-400 font-mono px-4 py-2 rounded-xl flex items-center gap-2 shadow-lg shadow-sky-500/5">
+                        🚗 Retorno Seguro
+                    </span>
+                </div>
+            </div>
+
+            <!-- Preview do App / Card Destaque -->
+            <div class="relative perspective-1000">
+                <div class="bg-slate-900/60 backdrop-blur-md rounded-3xl border border-slate-800 p-6 shadow-2xl transform rotate-y-12 rotate-x-12 hover:rotate-0 transition-transform duration-700">
+                    <div class="h-32 bg-gradient-to-r from-amber-800 to-amber-950 rounded-2xl relative px-6 flex items-end pb-4 mb-8">
+                        <div class="absolute top-4 right-4 bg-slate-950/80 text-xs font-semibold px-3 py-1.5 rounded-full border border-slate-700/50 text-slate-300">
+                            📍 Asa Sul
+                        </div>
+                        <div class="w-16 h-16 bg-slate-950/90 rounded-2xl flex items-center justify-center text-4xl shadow-lg border border-slate-800 translate-y-8 transform">
+                            🥙
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold text-white mb-2">Beirute (Asa Sul)</h3>
+                    <p class="text-slate-400 text-sm mb-6 line-clamp-3">
+                        O lendário patrimônio cultural oficial de Brasília. Ponto de encontro histórico de intelectuais, artistas e políticos desde 1966. Imperdível pelo seu quibe frito e chopp de colarinho cremoso.
+                    </p>
+
+                    <div class="space-y-3 bg-slate-950/50 p-4 rounded-xl border border-slate-800/50 mb-6">
+                        <div class="flex items-center gap-2 text-sm text-slate-300">
+                            <span class="text-slate-500 font-medium w-24">Faixa Preço:</span> R$$ (Moderado)
+                        </div>
+                        <div class="flex items-center gap-2 text-sm text-slate-300">
+                            <span class="text-slate-500 font-medium w-24">Estilo:</span> 
+                            <span class="bg-slate-800 px-2 py-0.5 rounded text-xs border border-slate-700">MPB</span>
+                            <span class="bg-slate-800 px-2 py-0.5 rounded text-xs border border-slate-700">Bossa Nova</span>
+                        </div>
+                    </div>
+
+                    <button class="w-full py-3 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold rounded-xl shadow-lg shadow-amber-500/20 transition-all flex items-center justify-center gap-2">
+                        ❤️ Agendar Visita
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção de Curadoria -->
+        <div class="pt-12 border-t border-slate-900/50 relative z-10">
+            <h2 class="text-3xl font-bold text-white mb-8 text-center">Nossa Curadoria pelo DF</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-4 text-center">
+                <div class="p-4 bg-slate-900/40 rounded-2xl border border-slate-800/60">
+                    <h4 class="font-bold text-amber-500">Asa Sul</h4>
+                    <p class="text-[10px] text-slate-500 mt-1">Boêmia clássica e tradicional</p>
+                </div>
+                <div class="p-4 bg-slate-900/40 rounded-2xl border border-slate-800/60">
+                    <h4 class="font-bold text-amber-500">Águas Claras</h4>
+                    <p class="text-[10px] text-slate-500 mt-1">Moderna, jovem e intensa</p>
+                </div>
+                <div class="p-4 bg-slate-900/40 rounded-2xl border border-slate-800/60">
+                    <h4 class="font-bold text-amber-500">Sudoeste</h4>
+                    <p class="text-[10px] text-slate-500 mt-1">Residencial animado e familiar</p>
+                </div>
+                <div class="p-4 bg-slate-900/40 rounded-2xl border border-slate-800/60">
+                    <h4 class="font-bold text-amber-500">Lago Sul</h4>
+                    <p class="text-[10px] text-slate-500 mt-1">Premium, charmoso e relaxante</p>
+                </div>
+                <div class="p-4 bg-slate-900/40 rounded-2xl border border-slate-800/60">
+                    <h4 class="font-bold text-amber-500">Guará</h4>
+                    <p class="text-[10px] text-slate-500 mt-1">Ar fresco e aconchegante</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="border-t border-slate-900 bg-slate-950 py-8 relative z-10">
+        <div class="max-w-7xl mx-auto px-6 text-center space-y-4">
+            <div class="flex justify-center gap-4 text-xs font-bold">
+                <span class="text-emerald-500 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-900/50">Se beber, não dirija</span>
+                <span class="text-sky-500 bg-sky-500/10 px-3 py-1 rounded-full border border-sky-900/50">Intercale com Água</span>
+            </div>
+            <p class="text-slate-500 text-xs">
+                Projeto desenvolvido com React, TypeScript e Tailwind CSS. <br>
+                Simulação arquitetural baseada no Modelo C4.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
