@@ -40,7 +40,7 @@ Consulte a pasta `/docs` para visualizar as impressões de cada tela.
 | `tela-opção-bares.png` |bares e suas descrições|
 
 **Como o app funciona:**
-1. Abra o site `https://magical-crumble-82e185.netlify.app/` no navegador.
+1. Abra o site https://magical-crumble-82e185.netlify.app/ no navegador.
 2. visulize as opçoes ou busque pela area ou bar que deseja .
 3. Clique em qualquer cartão de bar ver descrição completa .
 4. Use o botão "agendar" para marca o seu evento .
