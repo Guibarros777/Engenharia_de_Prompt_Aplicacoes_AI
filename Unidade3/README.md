@@ -4,6 +4,7 @@
 **Professor(a):** Kadidja Valéria  
 **Data:** 05/11/2026  
 **Turma:** ENG. SOFT + SI – 6ª feira – SEDE UDF  
+**Alunos:**Guilherme Behrmann e Guilherme silva
 
 ---
 
@@ -39,20 +40,19 @@ Consulte a pasta `/docs` para visualizar as impressões de cada tela.
 | `tela-opção-bares.png` |bares e suas descrições|
 
 **Como o app funciona:**
-1. Abra o site `petvizinho.html` no navegador.
-2. Permita o acesso à localização para ver ONGs próximas.
-3. Clique em qualquer cartão de animal de estimação para ver detalhes.
-4. Use o botão "Conversar" para abrir o chat.
-5. Experimente o modo escuro pelo ícone ☀️/🌙 na barra de navegação.
-
+1. Abra o site `https://magical-crumble-82e185.netlify.app/` no navegador.
+2. visulize as opçoes ou busque pela area ou bar que deseja .
+3. Clique em qualquer cartão de bar ver descrição completa .
+4. Use o botão "agendar" para marca o seu evento .
+5. Experimente o botão copiar convite para whatsapp para enviar um convite detalhado do evento.
 ---
 
 ## ⚙️ Plataforma Utilizada no HealthSchedule
 
-**Bubble.io — Desenvolvimento No-Code / Low-Code**
+**Bubble.io — Desenvolvimento No-Code / Low-Code**e ** Ai Studio**
 
 **Justificativa da escolha:**  
-A ferramenta foi escolhida por ser uma das plataformas No-Code mais robustas para a criação de aplicações web completas (Full-Stack). Para o escopo do **HealthSchedule**, o Bubble permitiu desenvolver a interface do guia de bares, modelar o banco de dados do catálogo e criar a lógica de agendamento de rolês em um único ambiente visual, acelerando o desenvolvimento sem a necessidade de codificação manual tradicional.
+A ferramenta foi escolhida por ser uma das plataformas No-Code mais robustas para a criação de aplicações web completas (Full-Stack). Para o escopo do **HealthSchedule**, o Bubble permitiu desenvolver a interface do guia de bares, modelar o banco de dados do catálogo e criar a lógica de agendamento de rolês em um único ambiente visual, acelerando o desenvolvimento sem a necessidade de codificação manual tradicional. o Google AI Studio se enquadra perfeitamente nesse conceito, mas atua dentro de um nicho muito específico: ele é uma ferramenta Low-Code/No-Code voltada para Inteligência Artificial Generativa.
 
 **Características que motivaram a escolha:**
 - Desenvolvimento visual interativo (Drag-and-Drop) com motor de responsividade para adaptar a interface tanto para o celular da galera no bar quanto para o desktop.
