@@ -13,6 +13,7 @@
 A equipe desenvolveu  o **HealthSchedule**, um aplicativo web de bares em brasilias ,focado em da ao usuario a opção de escolher algo de qualidade ou do seu estilo musical
 
 **Problema resolvido:** Facilitar a buscar e filtrar suas opcoes determinando o tipo , o estilo ,a faixa de preço e por fim a qualidade do bar 
+
 **Funcionalidades desenvolvidas:**
 - 🔍 Dicas de saude ,deixando claro que apesar de beber ser uma diversão deve ser feita com responsabilidade
 - 🗺️ Regioes de brasilia ,para filtrar sua busca
