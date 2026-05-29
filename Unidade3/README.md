@@ -50,7 +50,7 @@ Consulte a pasta `/docs` para visualizar as impressões de cada tela.
 
 ## ⚙️ Plataforma Utilizada no HealthSchedule
 
-**Bubble.io — Desenvolvimento No-Code / Low-Code**e ** Ai Studio**
+**Bubble.io — Desenvolvimento No-Code / Low-Code**e Ai Studio
 
 **Justificativa da escolha:**  
 A ferramenta foi escolhida por ser uma das plataformas No-Code mais robustas para a criação de aplicações web completas (Full-Stack). Para o escopo do **HealthSchedule**, o Bubble permitiu desenvolver a interface do guia de bares, modelar o banco de dados do catálogo e criar a lógica de agendamento de rolês em um único ambiente visual, acelerando o desenvolvimento sem a necessidade de codificação manual tradicional. o Google AI Studio se enquadra perfeitamente nesse conceito, mas atua dentro de um nicho muito específico: ele é uma ferramenta Low-Code/No-Code voltada para Inteligência Artificial Generativa.
